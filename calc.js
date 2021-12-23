@@ -1,15 +1,3 @@
-const add = (firstNumber, secondNumber) => firstNumber + secondNumber;
-
-const sub = (firstNumber, secondNumber) => firstNumber - secondNumber;
-
-const mult = (firstNumber, secondNumber) => firstNumber * secondNumber;
-
-const div = (firstNumber, secondNumber) => firstNumber / secondNumber;
-
-const printResult = function (arrayOfNumbers, selectedOperator, result) {
-    console.log(`${arrayOfNumbers.join(` ${selectedOperator} `)} = ${result}`);
-}
-
 const operators = { '+': add, '-': sub, '*': mult, '/': div };
 const selectedOperator = enterOperator(operators);
 const quantityOfNumbers = enterQuantityOfOperators();
@@ -21,6 +9,26 @@ console.log(operators[selectedOperator]);
 console.log(arrayOfNumbers);
 console.log(result);
 printResult(arrayOfNumbers, selectedOperator, result);
+
+function add(firstNumber, secondNumber) {
+    return  firstNumber + secondNumber;
+}
+
+function sub(firstNumber, secondNumber) {
+    return  firstNumber - secondNumber;
+}
+
+function mult(firstNumber, secondNumber) {
+    return  firstNumber * secondNumber;
+}
+
+function div(firstNumber, secondNumber) {
+    return  firstNumber / secondNumber;
+}
+
+function printResult(arrayOfNumbers, selectedOperator, result) {
+    return console.log(`${arrayOfNumbers.join(` ${selectedOperator} `)} = ${result}`);
+ }
 
 function enterQuantityOfOperators() {
     let quantityOfNumbers = null;
